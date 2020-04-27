@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- 
+            The justify-content
+            property is used to align the flex items
+            along the main axis
+
+            The align-items property is used to 
+            align the flex items vertically.
+
+
+            The align-content property is
+             used to align the flex lines.
+         -->
+        <style>
+            .box {
+                height: 70px;
+                width: 70px;
+                background-color: #cad3c8;
+                margin: 1rem;
+            }
+            .flex_container_1 {
+                background-color: #2c3a47;
+                padding: 3rem;
+                display: flex;
+                /* COLOUMN OR ROW */
+                flex-direction: row;
+                /* WRAP NO WRAP AND REVERSE */
+                flex-wrap: wrap;
+            }
+            .box_center {
+                height: 20vh;
+                width: 60%;
+                margin: auto;
+                background-color: #fd7272;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .sub_box {
+                height: 50px;
+                width: 50px;
+                background-color: #b33771;
+            }
+
+            .flex_container_2 {
+                background-color: #58b19f;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .box_flex_att_1 {
+                height: 50px;
+                width: 50px;
+                margin: 0.5rem;
+                flex: 2;
+                /* order: 3; */
+                background-color: #82589f;
+            }
+            .box_flex_att_2 {
+                height: 50px;
+                width: 50px;
+                margin: 0.5rem;
+                flex: 1;
+                /* order: 1; */
+                background-color: #82589f;
+            }
+            .box_flex_att_3 {
+                height: 50px;
+                width: 50px;
+                margin: 0.5rem;
+                flex: 1;
+                /* order: 2; */
+                background-color: #82589f;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex_container_1">
+            <div class="box">ITEM 1</div>
+            <div class="box">ITEM 2</div>
+            <div class="box">ITEM 3</div>
+            <div class="box">ITEM 4</div>
+            <div class="box">ITEM 5</div>
+            <div class="box">ITEM 6</div>
+            <div class="box">ITEM 7</div>
+            <div class="box">ITEM 8</div>
+            <div class="box">ITEM 9</div>
+            <div class="box">ITEM 10</div>
+        </div>
+        <!-- CENTERING OF DATA -->
+        <div class="box_center">
+            <div class="sub_box">ITEM</div>
+        </div>
+
+        <div class="flex_container_2">
+            <div class="box_flex_att_1">ITEM 1</div>
+            <div class="box_flex_att_2">ITEM 2</div>
+            <div class="box_flex_att_3">ITEM 3</div>
+        </div>
+
+        <!-- 
+
+
+            TALK ABOUT ORDER
+                
+         -->
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
