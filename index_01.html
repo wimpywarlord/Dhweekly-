@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!--
+        static :  is not positioned in any
+        special way; it is always positioned 
+        according to the normal flow of the page
+
+
+        relative : a relatively-positioned element
+        will cause it to
+        be adjusted away from its normal position.
+
+        fixed : is positioned relative to the viewport,
+        which means it always stays in the same place 
+        even if the page is scrolled.
+
+        absolute :is positioned relative to the nearest positioned ancestor
+        instead of positioned relative to the viewport, like fixed.
+        If nothing is thier as a container it will take viewport    
+
+        sticky:is positioned based on the user's
+        scroll position.
+     -->
+        <div style="height: 200vh;">
+            <div class="box box-1">ITEM 1</div>
+            <div class="box box-2">ITEM 2</div>
+            <div class="box box-3">ITEM 3</div>
+            <div
+                class="container"
+                style="
+                    background-color: red;
+                    position: relative;
+                    height: 200px;
+                    width: 200px;
+                "
+            >
+                <div class="box box-4">ITEM 4</div>
+            </div>
+
+            <div class="box box-5">ITEM 5</div>
+            <script src="js/script.js"></script>
+        </div>
+    </body>
+</html>
+
+<style>
+    .box {
+        height: 70px;
+        width: 70px;
+    }
+    .box-1 {
+        background-color: #2980b9;
+        position: static;
+    }
+    .box-2 {
+        background-color: #8e44ad;
+        position: relative;
+        left: 100px;
+    }
+    .box-3 {
+        background-color: #2c3e50;
+        /* REMOVES IT FROM THE NORMAL FLOW */
+        position: fixed;
+        top: 250px;
+        left: 300px;
+    }
+    .box-4 {
+        background-color: pink;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+    }
+    .box-5 {
+        background-color: #f1c40f;
+        position: sticky;
+        top: 0;
+        /* USE FOR NAV BARS */
+        width: 100%;
+    }
+</style>
